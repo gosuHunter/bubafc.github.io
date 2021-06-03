@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <title>Gallary</title>
+</head>
+<body>
+<link rel="stylesheet" href="srcs/Gallary.css">
+<link rel="stylesheet" href="srcs/buba.css">
+<div class = "logo"><a href='#'><img src ="imgs/logo.png"></a></div>
+<nav>
+  <ul>
+    <li><a href ="index.html">Home</a></li>
+    <li><a href ="players.html">Players</a></li>
+    <li><a href="Gallary.html">Gallary</a></li>
+    <li><a href ="index.html">About Us</a></li>
+  </ul>
+</nav>
+<div id = "GALLARY">
+    <h1>GALLARY</h1>
+    <div class = wrapper>
+
+      <div class= "slider">
+        <div class ="slides">
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <div class="slideContainer" style = "max-width: 800px">
+            <img class = "slide" src="imgs/1.jpg" style ="width:100%">
+            <img class = "slide" src="imgs/2.jpg" style ="width:100%">
+            <img class = "slide" src="imgs/3.jpg" style ="width:100%">
+            <img class = "slide" src="imgs/4.jpg" style ="width:100%">
+          </div>
+          <!--auto navigation-->
+          <div class ="auto-nav">
+            <div class ="auto1"></div>
+            <div class ="auto2"></div>
+            <div class ="auto3"></div>
+            <div class ="auto4"></div>
+          </div>
+          <!--manual nav-->
+          <div class="navigation-manual">
+            <label for="radio1" class ="man-btn"></label>
+            <label for="radio2" class ="man-btn"></label>
+            <label for="radio3" class ="man-btn"></label>
+            <label for="radio4" class ="man-btn"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var myIndex = 0;
+      showSlides();
+      function showSlides(){
+        var i; 
+        var x = document.getElementsByClassName("slide");
+        for( i = 0; i< x.length; i++)
+        {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if(myIndex > x.length)
+        {
+          myIndex =1;
+        }
+        x[myIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000);
+      }
+    </script>
+    </body>
+    

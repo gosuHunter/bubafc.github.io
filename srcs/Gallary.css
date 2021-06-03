@@ -1,0 +1,11 @@
+#GALLARY{
+    text-align: center;
+}
+.wrapper{
+    height: 100vh;
+}
+.slider{
+    border-radius: 10px;
+    overflow:hidden;
+}
+
